@@ -3063,13 +3063,13 @@ static int __ovs_nla_copy_actions(struct net *net, const struct nlattr *attr,
 			break;
 
 		case OVS_ACTION_ATTR_POP_NSH: {
-			__be16 inner_proto;
-
-			if (eth_type != htons(ETH_P_NSH))
-				return -EINVAL;
-			inner_proto = tun_p_to_eth_p(key->nsh.base.np);
-			if (!inner_proto)
-				return -EINVAL;
+//			__be16 inner_proto;
+//
+//			if (eth_type != htons(ETH_P_NSH))
+//				return -EINVAL;
+//			inner_proto = tun_p_to_eth_p(key->nsh.base.np);
+//			if (!inner_proto)
+//				return -EINVAL;
 			if (key->nsh.base.np == TUN_P_ETHERNET)
 				mac_proto = MAC_PROTO_ETHERNET;
 			else
